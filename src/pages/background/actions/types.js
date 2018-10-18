@@ -1,0 +1,2 @@
+export const TEST_ACTION = 'TEST_ACTION';
+export const REMOVE_TEST_ACTION = 'REMOVE_TEST_ACTION';
