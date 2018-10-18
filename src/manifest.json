@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Extension Boilerplate",
-  "short_name": "VK Ext",
+  "short_name": "ERR",
   "version": "0.0.1",
   "description":
   "A React Redux Chrome Extension",
@@ -9,7 +9,7 @@
     "default_title": "Example",
     "default_popup": "pages/popup.html"
   },
-  "author": "WildBrain",
+  "author": "Jack May",
   "background": {
     "page": "pages/background.html"
   },
@@ -25,8 +25,7 @@
     "activeTab",
     "http://*/*",
     "https://*/*",
-    "storage",
-    "alarms"
+    "storage"
   ],
   "minimum_chrome_version": "60"
 }

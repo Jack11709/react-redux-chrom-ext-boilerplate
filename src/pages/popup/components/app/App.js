@@ -4,28 +4,27 @@ import { connect } from 'react-redux';
 import { testAction, removeTestAction } from '../../../background/actions/testActions';
 import style from './app.css';
 
-class App extends React.Component {
-  handleTrigger = () => {
-    this.props.testAction();
+const App = (props) => {
+  const { text } = props;
+
+  const handleTrigger = () => {
+    props.testAction();
   };
 
-  handleRemove = () => {
-    this.props.removeTestAction();
+  const handleRemove = () => {
+    props.removeTestAction();
   };
 
-  render() {
-    const { text } = this.props;
-    return (
-      <div className={style.wrapper}>
-        <p>{text}</p>
-        {!text
-          ? <button type="button" onClick={this.handleTrigger}>Trigger Test</button>
-         : <button type="button" onClick={this.handleRemove}>Remove Test</button>
-        }
-      </div>
-    );
-  }
-}
+  return (
+    <div className={style.wrapper}>
+      <p>{text}</p>
+      {!text
+        ? <button type="button" onClick={handleTrigger}>Trigger Test</button>
+       : <button type="button" onClick={handleRemove}>Remove Test</button>
+      }
+    </div>
+  );
+};
 
 App.propTypes = {
   testAction: PropTypes.func.isRequired,
